@@ -1,0 +1,218 @@
+.separator::after {
+    content: "|";  /* Default content for desktops */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 920px) {
+    .separator::after {
+        content: "\A";  /* Line break for mobile */
+        white-space: pre;  /* Ensure the line break is respected */
+    }
+}
+
+
+/* Global styles */
+body {
+    font-family: Verdana, sans-serif;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #111111;
+	background-image: url("./images/bg/sunset.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: scroll;
+	font-size: 20px;
+}
+
+.img{
+    width: 60%;
+}
+  
+.icon{
+    width: 10%;
+}
+
+/* Reset default styles */
+* {
+    margin: auto;
+    box-sizing: border-box;	
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #8B5E4F;
+}
+h1 {
+	font-size: 2em;	
+}
+
+h2 {
+	font-size: 1.5em;	
+}
+
+
+.text {
+	border: 5px groove black;
+	width: 60%;
+	background-color: #333333;
+	align-items: center;
+    text-align: center;
+}
+
+.subsite {
+	border: 5px groove black;
+	width: 60%;
+	background-color: #333333;
+	align-items: center;
+    text-align: center;
+	padding: 2em;
+	font-size: 24px;
+}
+	
+.nav{
+	background-color: #222222;
+	padding: 10px;
+	width: 98%;
+	text-align: center;
+	border: 5px groove black;
+	border-top-style: none;
+	font-size: 1.25em;	
+}
+
+.intro{
+	border: 5px groove black;
+	border-top-style: none;
+	border-bottom-style: none;
+	background-image: url("./images/bg/gelthelte.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: scroll;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+	padding: 1em;
+	width: 98%;
+	height: 5em;
+}
+
+.about{
+	align-items: center;
+    text-align: center;
+	background-color: #333333;
+	padding:2em;
+}
+
+.creditsinline{
+	font-size: 0.8rem; /* Makes the font size smaller */
+	text-align: right; /* Aligns text to the right */
+	width: 50%;
+}
+
+.credits{
+	font-size: 0.8rem; /* Makes the font size smaller */
+	text-align: right; /* Aligns text to the right */
+	width: 100%;
+}	
+
+
+.socials{
+	align-items: center;
+    text-align: center;
+	background-color: #444444;
+	padding:2em;
+}
+
+.conventions{
+	align-items: center;
+    text-align: center;
+	background-color: #555555;
+	padding:2em;
+}
+
+.widget{
+	align-items: center;
+    text-align: center;
+	background-color: #555555;
+	padding-bottom:2em;
+}
+
+.footer{
+	border-top: 5px groove black;
+	align-items: center;
+    text-align: left;
+	background-color: #333333;
+	padding: 1em;
+}
+
+.footercredits{
+	font-size: 0.8em;
+	align-items: center;
+    text-align: right;
+	background-color: #222222;
+	padding: 0.5em;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 920px) {
+	
+	.img{
+    width: 60%;
+	}
+  
+	.icon{
+    width: 4em;
+	}
+
+	
+	.text{
+	width: 98%;
+	}
+	
+	.widget{
+	padding-right: 0px;
+	padding-left: 0px;
+	}
+	
+	.nav{
+	text-align: right;
+	width:100%;
+	}
+	
+	.subsite {
+	width: 98%;
+	padding: 1em;
+	}
+	
+	.intro{
+	height: 8em;
+	width:100%;
+	}
+	
+	.about{
+	padding:1em;
+	}
+
+	.socials{
+	padding:1em;
+	}
+
+	.conventions{
+	padding:1em;
+	}
+
+	.widget{
+	padding-bottom:1em;
+	}
+	
+	.footer{
+	font-size: 0.75em;
+	}
+
+	.footercredits{
+	font-size: 0.75em;
+	}
+}
