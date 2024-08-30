@@ -47,13 +47,14 @@ a:hover {
     color: #8B5E4F;
 }
 h1 {
-	font-size: 2em;	
+	font-size: 2em;
+	text-align: center;
 }
 
 h2 {
-	font-size: 1.5em;	
+	font-size: 1.5em;
+	text-align: center;
 }
-
 
 .text {
 	border: 5px groove black;
@@ -69,6 +70,16 @@ h2 {
 	background-color: #333333;
 	align-items: center;
     text-align: center;
+	padding: 2em;
+	font-size: 24px;
+}
+
+.subsiteleft {
+	border: 5px groove black;
+	width: 60%;
+	background-color: #333333;
+	align-items: center;
+    text-align: justify;
 	padding: 2em;
 	font-size: 24px;
 }
@@ -157,10 +168,36 @@ h2 {
 	padding: 0.5em;
 }
 
+.apply-box {
+    width: 40%;
+    padding: 1em;
+    background-color: #bbbbbb;
+    border: 2px solid #e0ad16; /* Dodger Blue */
+    border-radius: 0.5em;
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1em auto;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.apply-box a {
+    text-decoration: none;
+    color: #8B5E4F; /* Dodger Blue */
+    font-weight: bold;
+    display: block;
+    font-size: 1.5	em;
+}
+
+.apply-box a:hover {
+    color: #8B5E4F	;
+    background-color: #e0d2a8;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 920px) {
 	
 	.img{
-    width: 60%;
+    width: 80%;
 	}
   
 	.icon{
@@ -187,6 +224,11 @@ h2 {
 	padding: 1em;
 	}
 	
+	.subsiteleft {
+	width: 98%;
+	padding: 1em;
+	}
+	
 	.intro{
 	height: 8em;
 	width:100%;
@@ -203,6 +245,10 @@ h2 {
 	.conventions{
 	padding:1em;
 	}
+	
+	.apply-box {
+    width: 80%;
+   }
 
 	.widget{
 	padding-bottom:1em;
