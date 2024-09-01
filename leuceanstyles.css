@@ -33,6 +33,10 @@ body {
     width: 10%;
 }
 
+.pano{
+    width: 100%;
+}
+
 /* Reset default styles */
 * {
     margin: auto;
@@ -64,6 +68,10 @@ h2 {
     text-align: center;
 }
 
+.blurbtext{
+	text-align: justify;
+}
+
 .subsite {
 	border: 5px groove black;
 	width: 60%;
@@ -72,6 +80,7 @@ h2 {
     text-align: center;
 	padding: 2em;
 	font-size: 24px;
+	margin: 1em auto;
 }
 
 .subsiteleft {
@@ -82,6 +91,7 @@ h2 {
     text-align: justify;
 	padding: 2em;
 	font-size: 24px;
+	margin: 1em auto;
 }
 	
 .nav{
@@ -108,7 +118,7 @@ h2 {
     text-align: center;
 	padding: 1em;
 	width: 98%;
-	height: 5em;
+	height: 6em;
 }
 
 .about{
@@ -203,7 +213,10 @@ h2 {
 	.icon{
     width: 4em;
 	}
-
+	
+	.pano{
+    width: 95%;
+	}
 	
 	.text{
 	width: 98%;
