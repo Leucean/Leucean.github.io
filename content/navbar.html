@@ -1,0 +1,49 @@
+<div class="w3-dark-grey w3-bottombar w3-border-black w3-round-xlarge w3-mobile"
+    style="width: 90%; margin: auto; font-size: 1.33em; display: flex; flex-wrap: wrap; justify-content: center; padding: 2px;">
+
+  <div class="w3-dropdown-click w3-mobile" style="width: 20%;">
+    <button class="w3-button w3-dark-grey" style="width: 100%;" onclick="toggleDropdown('about')">
+      About Me <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey w3-hide" id="about">
+      <button class="w3-bar-item w3-button" onclick="document.getElementById('hobbies').style.display='block'">Hobbies</button>
+      <button class="w3-bar-item w3-button" onclick="document.getElementById('selfintro').style.display='block'">Self-Introduction</button>
+    </div>
+  </div>
+
+  <div class="w3-dropdown-click w3-mobile" style="width: 20%;">
+    <button class="w3-button w3-dark-grey" style="width: 100%;" onclick="toggleDropdown('cons')">
+      Conventions <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey w3-hide" id="cons">
+      <button class="w3-bar-item w3-button" onclick="document.getElementById('history').style.display='block'">History</button>
+      <button class="w3-bar-item w3-button" onclick="document.getElementById('map').style.display='block'">Map</button>
+    </div>
+  </div>
+
+  <div class="w3-dropdown-click w3-mobile" style="width: 20%;">
+    <button class="w3-button w3-dark-grey" style="width: 100%;" onclick="toggleDropdown('gallery')">
+      Gallery <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey w3-hide" id="gallery">
+      <a href="#" class="w3-bar-item w3-button">X</a>
+      <a href="#" class="w3-bar-item w3-button">Y</a>
+    </div>
+  </div>
+
+  <div class="w3-mobile" style="width: 20%;">
+    <button class="w3-button w3-dark-grey" style="width: 100%;">Lore</button>
+  </div>
+
+  <div class="w3-dropdown-click w3-mobile" style="width: 20%;">
+    <button class="w3-button w3-dark-grey" style="width: 100%;" onclick="toggleDropdown('lynx')">
+      Other Lynx <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey w3-hide" id="lynx">
+      <a href="#" class="w3-bar-item w3-button">X</a>
+      <a href="#" class="w3-bar-item w3-button">Y</a>
+    </div>
+  </div>
+</div>
+
+<div w3-include-html="/content/navbarcontent.html"></div>
