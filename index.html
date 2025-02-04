@@ -2,123 +2,37 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Leucean's Really Cool Website</title>
-		<link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="leuceanstyles.css">
+		<link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/leuceanstyles.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://www.w3schools.com/lib/w3.js"></script>
 	</head>
 	<body>
-		<div class="intro" id="top">	
-		<h1>Chuff Chuff, Meow Meow!</h1>
-		<div class="credits">
-			<p>Background by Leucean</p>
+		<div class="w3-mobile" style="margin:auto;width:90%">
+			<br>
+			<div w3-include-html="/content/header.html"></div>
+			<div w3-include-html="/content/socials.html" style="margin:auto;width:98%"></div>
+			<div w3-include-html="/content/navbar.html" style="margin:auto;width:98%"></div>
+			<script>
+				w3.includeHTML();
+			</script>
+			<script>
+				function toggleDropdown(id) {
+					var dropdown = document.getElementById(id);
+					if (dropdown.classList.contains("w3-show")) {
+					dropdown.classList.remove("w3-show");
+					} else {
+					dropdown.classList.add("w3-show");
+					}
+				}
+			</script>
 		</div>
+		<div class="w3-display-bottomright">
+			<div w3-include-html="/content/credits.html"></div>
 		</div>
-		<div class="nav">
-			<nav>
-				<ul>
-					<a href="#socials">Socials</a> <span class="separator"></span>
-					<a href="#about">About Me</a> <span class="separator"></span> 
-					<a href="#conventions">Convention List</a> <span class="separator"></span> 
-					<a href="#links">Other Lynx</a>
-				</ul>
-			<nav>
-		</div>
-		<br>
-		<div class="text">
-			<div class="socials" id="socials">
-				<h2>Socials!</h2>
-				<br>
-				<p>Here, you can find my social media links! Feel free to poke me!</p>
-				<br>
-				<p class="bulletpointcentre">> <a href = http://discord.com/users/372645010408996865>Discord</a></p>
-				<br>
-				<p class="bulletpointcentre">> <a href = https://bsky.app/profile/leucean.clep.gay>Bsky</a></p>
-				<br>
-				<p class="bulletpointcentre">> <a href = https://t.me/Leucean>Telegram</a></p>
-				<br>
-				<p class="bulletpointcentre">> <a href = https://www.furaffinity.net/user/fennyx>FurAffinity</a></p>
-				<br>
-				<p class="bulletpointcentre">> <a href = https://steamcommunity.com/id/leucean>Steam</a></p>
-			</div>
-			<div class="about" id="about">
-				<h2>About Me!</h2>
-				<br>
-				<p>Heya! I'm <a href=https://www.youtube.com/watch?v=dQw4w9WgXcQ><b>Leucean</b></a> (Ly tʃe ən), a <a href = https://en.wikipedia.org/wiki/Clouded_leopard>Clouded Leopard</a> and an occasional lynx from the tropics!</p>
-				<br>
-				<img src="./images/icons/lhappy.png" alt="Leucean, the clouded leopard, smiling. Art by Lulukaju, 2023." class="img">
-				<div class="creditsinline">
-					<p>Art by <a href=https://lulukaju.carrd.co/>Lulukaju</a>, 2023</p>
-				</div>
-				<br>
-				<p>My pronouns are He/They, and I'm a <a href=https://lgbtqia.wiki/wiki/Panromantic>Panromantic</a> <a href=https://en.wikipedia.org/wiki/Demisexuality>Demisexual</a> dude!</p>
-				<br>
-				<img src="./images/icons/pandemipride.png" alt="Leucean, the clouded leopard, smiling while a pansexual flag hangs from his mouth. The asexual and pansexual colours are in the background. Art by Leucean, 2024." class="img">
-				<div class="creditsinline">
-					<p>Art by <a href="#about">Leucean</a>, 2024.</p>
-				</div>
-				<br>
-				<p style="text-align: justify;">I'm a university student from Singapore, and <a href=https://www.youtube.com/watch?v=Gn8fVnrun5Y>Toronto</a> is my adopted home!</p>
-				<br>
-				<p style="text-align: justify;">I have many, many hobbies and I love to talk about them! From the nerdiest of nerdy stuff like <a href=lore.html>D&D</a>, to the jock-iest sportsball stuff like <a href=https://youtu.be/82RIfy-gRa4?si=pwwzwEaQjiQt7ehM>Football</a>! You can find the whole list <a href=https://www.furaffinity.net/journal/10497245/>here!</a></p>
-				<br>
-				<p style="text-align: justify;">I enjoy a good hike! If I'm ever in your area and you know an amazing hiking trail to scamper down, <a href=#socials>hit me up</a>!</p>
-				<br>
-				<p style="text-align: justify;">Sometimes, I make music. Sometimes, I make art. Most of the time, you will find me singing (badly) to songs I really enjoy. I occasionally commission art, and you can find them on my <a href=https://www.furaffinity.net/user/fennyx>FA</a>!</p>
-				<br>
-				<p style="text-align: justify;">I'm also a massive Strategy Game nerd, so if you play games like Civilization, Humankind, Stellaris, or even obscure economic simulators like X4: Foundations and want to play multiplayer or discuss it, you should add me on <a href=https://steamcommunity.com/id/leucean>Steam</a>!</p>
-				<br>
-				<p style="text-align: justify;">So yeah, if you see me, feel free to say hi and ask for a hug! If you give me Boba Tea, I will be eternally grateful! That's pretty much it! Thanks for reading my page!</p>
-				<br>
-				<h1>Chuff Chuff, Meow Meow!</h1>
-				<br>
-				<img src="./images/gallery/polelean.jpg" alt="Leucean leaning sideways while holding onto a pole. Photo by Dangerpylons, 2024." class="pano">
-				<div class="creditsinline">
-					<p>Photo by <a href=https://bsky.app/profile/pylon.bsky.social>Dangerpylons</a>, 2024.</p>
-				</div>
-			</div>		
-			<div class="conventions" id="conventions">
-				<h2>Conventions List!</h2>
-				<br>
-				<h3>2023</h3>
-				<br>
-				<p class="bulletpoint">> Little Island FurCon, Singapore</p>
-				<br><br>
-				<h3>2024</h3>
-				<br>
-				<p class="bulletpoint">> Nordic FuzzCon, Sweden</p>
-				<br>
-				<p class="bulletpoint">> Little Island Fur Con, Singapore</p>
-				<br>
-				<p class="bulletpoint">> Canfurence, Canada</p>
-				<br>
-				<p class="bulletpoint">> Midwest FurFest, United States</p>
-				<br><br>
-				<h3>2025</h3>
-				<br>
-				<p class="bulletpoint">> (SOON) Furnal Equinox, Canada</p>
-			</div>
-			<div class="widget">
-			<!-- <iframe src="conmap.html" style="border:none; width:100%;height:28em"></iframe> -->
-			</div>
-		</div>
-		<br>
-		<footer>
-			<div class="footer" id="links">
-				<p style="font-size:1.25em;"><b>Other Useful Lynx</b></p>
-				<p class="bulletpointsmall">> <a href = /gallery>Art Gallery</a></p>
-				<p class="bulletpointsmall">> <a href = /partnerapp>Boyfriend/Girlfriend/Partner Application Form</a></p>
-				<p class="bulletpointsmall">> <a href = /lore>Character Lore</a></p>
-				<p class="bulletpointsmall">> <a href =https://www.furtrack.com/index/character:leucean>FurTrack</a></p>
-				<p class="bulletpointsmall">> <a href=https://www.furaffinity.net/journal/10497245/>Hobby List</a></p>
-				<p class="bulletpointsmall">> <a href= /conguide>How to Find Me at a Con</a></p>
-				<p class="bulletpointsmall">> <a href= https://t.me/addstickers/FennyxStickers>Sticker Lynx</a></p>
-				<p class="bulletpointsmall">> <a href=index.html#top>Return to Top</a></p>
-			</div>
-			<div class="footercredits" id="credits">
-				<p>Website under reconstruction, Leucean, 2025.</p>
-			</div>
-		</footer>
 	</body>
 </html>
