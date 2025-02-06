@@ -1,0 +1,63 @@
+<html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Leucean's Really Cool Website</title>
+		<link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/leuceanstyles.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://www.w3schools.com/lib/w3.js"></script>
+	</head>
+<div class="w3-dark-grey w3-bottombar w3-border-black w3-round-xlarge w3-mobile"
+    style="width: 100%; margin: auto; font-size: 1.33em; display: flex; flex-wrap: wrap; justify-content: center; padding-top: 8px;padding-bottom:8px;">
+
+  <div class="w3-dropdown-click w3-mobile" style="width: 20%;">
+    <button class="w3-button w3-dark-grey" style="width: 100%;" onclick="toggleDropdown('about')">
+      About Me <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey w3-hide" id="about">
+      <button class="w3-bar-item w3-button" onclick="document.getElementById('hobbies').style.display='block'">Hobbies</button>
+      <button class="w3-bar-item w3-button" onclick="document.getElementById('selfintro').style.display='block'">Self-Introduction</button>
+    </div>
+  </div>
+
+  <div class="w3-dropdown-click w3-mobile" style="width: 20%;">
+    <button class="w3-button w3-dark-grey" style="width: 100%;" onclick="toggleDropdown('cons')">
+      Conventions <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey w3-hide" id="cons">
+      <button class="w3-bar-item w3-button" onclick="document.getElementById('history').style.display='block'">History</button>
+      <button class="w3-bar-item w3-button" onclick="document.getElementById('map').style.display='block'">Map</button>
+    </div>
+  </div>
+
+  <div class="w3-dropdown-click w3-mobile" style="width: 20%;">
+    <button class="w3-button w3-dark-grey" style="width: 100%;" onclick="toggleDropdown('gallery')">
+      Gallery (WIP) <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey w3-hide" id="gallery">
+      <a href="#" class="w3-bar-item w3-button">Art</a>
+      <a href="#" class="w3-bar-item w3-button">Fursuit</a>
+    </div>
+  </div>
+
+  <div class="w3-mobile" style="width: 20%;">
+    <button class="w3-button w3-dark-grey" style="width: 100%;" onclick="document.getElementById('lore').style.display='block'">Lore</button>
+  </div>
+
+  <div class="w3-dropdown-click w3-mobile" style="width: 20%;">
+    <button class="w3-button w3-dark-grey" style="width: 100%;" onclick="toggleDropdown('lynx')">
+      Other Lynx <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey w3-hide" id="lynx">
+		<a href="https://www.furtrack.com/index/character:leucean" class="w3-bar-item w3-button">FurTrack</a>
+		<button class="w3-bar-item w3-button" onclick="document.getElementById('partnerapp').style.display='block'">Partner Form</button>
+		<a href="https://t.me/addstickers/FennyxStickers" class="w3-bar-item w3-button">Telegram Stickers</a>
+    </div>
+  </div>
+</div>
+
+<div w3-include-html="/content/navbarcontent.html"></div>
+</html>

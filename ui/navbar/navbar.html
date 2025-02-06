@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leucean's Really Cool Website</title>
+    <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/leuceanstyles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+  </head>
+  <body>
+    <div id="navbar" class="w3-hide-small w3-hide-medium">
+      <div class="w3-bar w3-center w3-round-xlarge w3-bottombar w3-border-black" style="font-size: 1.33em">
+        <div
+          class="w3-dropdown-hover w3-button w3-dark-grey w3-border-black w3-border-right"
+          style="width: 20%; padding-left: 0; padding-right: 0">
+          <button class="w3-button" onclick="document.getElementById('about').style.display='block'">
+            About Me <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="w3-dropdown-content w3-bar-block w3-grey" style="width: 20%">
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('hobbies').style.display='block'">
+              Hobbies
+            </button>
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('conguide').style.display='block'">
+              How to Find Me at Cons
+            </button>
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('intro').style.display='block'">
+              Introduction
+            </button>
+          </div>
+        </div>
+        <div
+          class="w3-dropdown-hover w3-button w3-dark-grey w3-border-black w3-border-right"
+          style="width: 20%; padding-left: 0; padding-right: 0">
+          <button class="w3-button">Conventions <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-grey" style="width: 20%">
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('cons').style.display='block'">
+              History
+            </button>
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('map').style.display='block'">
+              Map
+            </button>
+          </div>
+        </div>
+        <div
+          class="w3-dropdown-hover w3-button w3-dark-grey w3-border-black w3-border-right"
+          style="width: 20%; padding-left: 0; padding-right: 0">
+          <button class="w3-button">Gallery (WIP) <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-grey" style="width: 20%">
+            <button class="w3-bar-item w3-button">Art</button>
+            <button class="w3-bar-item w3-button">Fursuit</button>
+          </div>
+        </div>
+        <div
+          class="w3-dropdown-hover w3-button w3-dark-grey w3-border-black w3-border-right"
+          style="width: 20%; padding-left: 0; padding-right: 0">
+          <button class="w3-button" onclick="document.getElementById('lore').style.display='block'">Lore</button>
+        </div>
+        <div class="w3-dropdown-hover w3-button w3-dark-grey" style="width: 20%; padding-left: 0; padding-right: 0">
+          <button class="w3-button">Lynx and Stuff <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-grey" style="width: 20%">
+            <button class="w3-bar-item w3-button">FurTrack</button>
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('partnerapp').style.display='block'">
+              Partner Form
+            </button>
+            <button class="w3-bar-item w3-button">Stickers</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="navbar-mobile" class="w3-hide-large">
+      <div class="w3-bar w3-center w3-round-xlarge w3-bottombar w3-border-black">
+        <div
+          class="w3-mobile w3-dropdown-click w3-button w3-dark-grey w3-border-black w3-border-right"
+          style="width: 20%; padding-left: 0; padding-right: 0">
+          <button class="w3-button" onclick="document.getElementById('about').style.display='block'">
+            About Me <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="w3-dropdown-content w3-bar-block w3-grey" style="width: 20%">
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('hobbies').style.display='block'">
+              Hobbies
+            </button>
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('conguide').style.display='block'">
+              How to Find Me at Cons
+            </button>
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('intro').style.display='block'">
+              Introduction
+            </button>
+          </div>
+        </div>
+        <div
+          class="w3-mobile w3-dropdown-click w3-button w3-dark-grey w3-border-black w3-border-right"
+          style="width: 20%; padding-left: 0; padding-right: 0">
+          <button class="w3-button">Conventions <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-grey">
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('cons').style.display='block'">
+              History
+            </button>
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('map').style.display='block'">
+              Map
+            </button>
+          </div>
+        </div>
+        <div
+          class="w3-mobile w3-dropdown-click w3-button w3-dark-grey w3-border-black w3-border-right"
+          style="width: 20%; padding-left: 0; padding-right: 0">
+          <button class="w3-button">Gallery (WIP) <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-grey">
+            <button class="w3-bar-item w3-button">Art</button>
+            <button class="w3-bar-item w3-button">Fursuit</button>
+          </div>
+        </div>
+        <div
+          class="w3-mobile w3-dropdown-click w3-button w3-dark-grey w3-border-black w3-border-right"
+          style="width: 20%; padding-left: 0; padding-right: 0">
+          <button class="w3-button" onclick="document.getElementById('lore').style.display='block'">Lore</button>
+        </div>
+        <div
+          class="w3-mobile w3-dropdown-click w3-button w3-dark-grey"
+          style="width: 20%; padding-left: 0; padding-right: 0">
+          <button class="w3-button">Lynx and Stuff <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-grey">
+            <button class="w3-bar-item w3-button">FurTrack</button>
+            <button class="w3-bar-item w3-button" onclick="document.getElementById('partnerapp').style.display='block'">
+              Partner Form
+            </button>
+            <button class="w3-bar-item w3-button">Stickers</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div w3-include-html="/ui/navbar/content/about/conguide.html"></div>
+    <div w3-include-html="/ui/navbar/content/about/intro.html"></div>
+    <div w3-include-html="/ui/navbar/content/about/hobbies.html"></div>
+    <div w3-include-html="/ui/navbar/content/cons/conlist.html"></div>
+    <div w3-include-html="/ui/navbar/content/lore/lore.html"></div>
+    <div w3-include-html="/ui/navbar/content/lynx/partnerapp/partnerapp.html"></div>
+  </body>
+</html>
