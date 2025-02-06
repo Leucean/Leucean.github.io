@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Leucean's Really Cool Website</title>
+		<link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/leuceanstyles.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://www.w3schools.com/lib/w3.js"></script>
+	</head>
+	<body>
+		<div class="w3-mobile" style="margin:auto;width:100%">
+			<div class="w3-hide-small" style="margin-top:120px;"></div>
+			<div w3-include-html="/content/header.html" class="w3-mobile"></div>
+			<div w3-include-html="/content/socials.html" style="margin:auto;width:98%;margin-bottom:20px;margin-top:20px;"></div>
+			<div w3-include-html="/content/navbar.html" style="margin:auto;width:75%" class="w3-hide-medium w3-hide-small"></div>
+			<div w3-include-html="/content/navbar.html" style="margin:auto;width:98%" class="w3-hide-large"></div>
+			<script>
+				w3.includeHTML();
+			</script>
+			<script>
+				function toggleDropdown(id) {
+					var dropdown = document.getElementById(id);
+					if (dropdown.classList.contains("w3-show")) {
+					dropdown.classList.remove("w3-show");
+					} else {
+					dropdown.classList.add("w3-show");
+					}
+				}
+			</script>
+		</div>
+		<div class="w3-display-bottomright w3-hide-medium w3-hide-small">
+			<div w3-include-html="/content/credits.html"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<body>
+	<div id="cons" class="w3-modal" onclick="this.style.display='none'">
+		<div class="w3-modal-content w3-animate-opacity">
+			<header class="w3-container w3-brown">
+				<span
+					onclick="document.getElementById('hobbies').style.display='none'"
+					class="w3-hover-brown w3-button w3-display-topright"
+					>&times;</span
+				>
+				<h1>Conventions List!</h1>
+			</header>
+
+			<div class="w3-dark-grey w3-container">
+				<h3>2023</h3>
+				<ul class="w3-ul w3-hoverable">
+					<li>Little Island FurCon, Singapore</li>
+				</ul>
+
+				<h3>2024</h3>
+				<ul class="w3-ul w3-hoverable">
+					<li>Nordic FuzzCon, Sweden</li>
+					<li>Little Island Fur Con, Singapore</li>
+					<li>Canfurence, Canada</li>
+					<li>Midwest FurFest, United States</li>
+				</ul>
+
+				<h3>2025</h3>
+				<ul class="w3-ul w3-hoverable">
+					<li>(SOON) Furnal Equinox, Canada</li>
+				</ul>
+
+				<footer class="w3-container w3-dark-grey w3-padding-24">
+					<div class="w3-container w3-dark-grey">
+						<span
+							onclick="document.getElementById('map').style.display='block', document.getElementById('history').style.display='none'"
+							class="w3-brown w3-button w3-display-bottomright"
+							>Open Maps Widget!</span
+						>
+					</div>
+					<span
+						onclick="document.getElementById('hobbies').style.display='none'"
+						class="w3-brown w3-button w3-display-bottommiddle"
+						>Return</span
+					>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<div id="map" class="w3-modal" onclick="this.style.display='none'">
+		<div class="w3-modal-content w3-animate-opacity">
+			<header class="w3-container w3-brown">
+				<span
+					onclick="document.getElementById('map').style.display='none'"
+					class="w3-hover-brown w3-button w3-display-topright"
+					>&times;</span
+				>
+				<h1>Conventions History!</h1>
+			</header>
+
+			<div class="w3-dark-grey w3-container">
+				<iframe
+					src="/ui/navbar/content/cons/conmap.html"
+					width="100%"
+					height="600px"
+					style="border: none"></iframe>
+
+				<footer class="w3-container w3-dark-grey w3-padding-24">
+					<div class="w3-container w3-dark-grey">
+						<span
+							onclick="document.getElementById('cons').style.display='block', document.getElementById('history').style.display='none'"
+							class="w3-brown w3-button w3-display-bottomright"
+							>Open Con History!</span
+						>
+					</div>
+					<span
+						onclick="document.getElementById('map').style.display='none'"
+						class="w3-brown w3-button w3-display-bottommiddle"
+						>Return</span
+					>
+				</footer>
+			</div>
+		</div>
+	</div>
+</body>
