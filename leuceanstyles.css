@@ -1,13 +1,18 @@
 body {
     font-family: Verdana, sans-serif;
     line-height: 1.5;
-    color: #ffffff;
-    background-color: #222222;
-    background-image: url("/media/images/bg/sunset.png");
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh; /* Ensures it takes up at least the full viewport */
     margin: 0; /* Removes default margins */
+}
+
+[data-bs-theme="dark"] body {
+    background-image: url("/media/ui/bg/sunset.png");
+}
+
+[data-bs-theme="light"] body {
+    background-image: url("/media/ui/bg/gelthelte.png");
 }
