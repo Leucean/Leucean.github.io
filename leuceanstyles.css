@@ -1,5 +1,4 @@
 body {
-    font-family: Verdana, sans-serif;
     line-height: 1.5;
     background-size: cover;
     background-attachment: scroll;
@@ -8,11 +7,52 @@ body {
     min-height: 100vh; /* Ensures it takes up at least the full viewport */
     margin: 0; /* Removes default margins */
 }
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Verdana, Geneva, sans-serif;
+}
 
 [data-bs-theme="dark"] body {
-    background-image: url("/media/ui/bg/sunset.png");
+    background-image: url("/media/ui/bg/sunset.webp");
 }
 
 [data-bs-theme="light"] body {
-    background-image: url("/media/ui/bg/gelthelte.png");
+    background-image: url("/media/ui/bg/gelthelte.webp");
+}
+
+[data-bs-theme="light"] .w3-grey {
+    background-color: #f1f1f1 !important;
+    color: #000 !important;
+}
+
+[data-bs-theme="light"] .w3-dark-grey {
+    background-color: #cccccc !important;
+    color: #000 !important;
+}
+
+[data-bs-theme="light"] .w3-white {
+    background-color: #232323 !important;
+    color: #ffffff !important;
+}
+
+/* Optional: add smooth transition */
+.w3-grey,
+.w3-dark-grey {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+button:hover {
+    filter: sepia(80%);
+    transition: 0.133s;
+}
+[data-bs-theme="light"] button:hover {
+    filter: sepia(40%);
+    transition: 0.133s;
 }
