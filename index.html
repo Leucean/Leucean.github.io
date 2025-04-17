@@ -39,12 +39,6 @@
 				const current = document.documentElement.getAttribute("data-bs-theme");
 				document.documentElement.setAttribute("data-bs-theme", current === "dark" ? "light" : "dark");
 			}
-			document.addEventListener("DOMContentLoaded", () => {
-				const modalElement = document.getElementById(window.location.hash.slice(1));
-				if (modalElement && modalElement.classList.contains("modal")) {
-					new bootstrap.Modal(modalElement).show();
-				}
-			});
 		</script>
 	</body>
 </html>
