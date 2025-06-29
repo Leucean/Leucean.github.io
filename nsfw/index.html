@@ -52,8 +52,8 @@
         <script>
             function easterEggAccess() {
                 const password = prompt("What's the password, pervert?");
-                if (password === "smh") {
-                    window.open("/nsfw/smh", "smh", "width=600,height=400");
+                if (password && password.toLowerCase() === "smh") {
+                    window.location.href = "/nsfw/smh";
                 } else {
                     alert("Smh.");
                 }
