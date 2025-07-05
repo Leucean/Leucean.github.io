@@ -16,13 +16,23 @@ h5,
 h6 {
     font-family: Verdana, Geneva, sans-serif;
 }
-
+a {
+    color: #aa8264;
+}
 [data-bs-theme="dark"] body {
     background-image: url("/media/ui/bg/wakerang.webp");
 }
 
 [data-bs-theme="light"] body {
     background-image: url("/media/ui/bg/gelthelte.webp");
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: #404040;
+}
+
+[data-bs-theme="light"] .card {
+    background-color: #bfbfbf;
 }
 
 [data-bs-theme="light"] .w3-grey {
