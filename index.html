@@ -27,6 +27,16 @@
 		<div class="container-fluid" id="navbar">
 			<div w3-include-html="/ui/navbar.html"></div>
 		</div>
+		<div class="container-fluid" id="quotes">
+			<div class="card mx-auto mt-4 shadow-sm w3-dark-grey w3-bottombar w3-border-black">
+				<div class="card-header text-center">Friend Quote of the Day</div>
+				<div class="card-body text-center">
+					<p class="fs-5 mb-2" id="quoteText"></p>
+					<p class="text-muted" id="quoteAuthor"></p>
+				</div>
+			</div>
+		</div>
+
 		<br />
 		<div
 			class="w3-display-bottomright w3-hide-small w3-hide-medium w3-container w3-dark-grey w3-right-align w3-opacity"
@@ -39,6 +49,39 @@
 				const current = document.documentElement.getAttribute("data-bs-theme");
 				document.documentElement.setAttribute("data-bs-theme", current === "dark" ? "light" : "dark");
 			}
+			const quotes = [
+				{ text: "I don't think the blanket needs condiments", author: "Leaf" },
+				{ text: "Meow", author: "Dansan" },
+				{ text: "WHAT", author: "Pylon" },
+				{ text: "idk im a cat", author: "Andrew" },
+				{ text: "Smh", author: "Pylon" },
+				{ text: "...", author: "Pylon" },
+				{ text: "Too human", author: "Siriza" },
+				{ text: "My pronouns are jolli/bee", author: "Oreolis" },
+				{ text: "I like how Pylonchat has created NPCs like 'Smh, but also uwu", author: "Matcha" },
+				{ text: "Excuse me. are you a lynx", author: "Pylon" },
+				{
+					text: "And thus India and Pakistan were created and the two nations would surely live in harmony",
+					author: "Pylon"
+				},
+				{
+					text: "It's the concept of being too employed and tired to gender so I'm a girlfailure boyfailure",
+					author: "Kathy (Smores)"
+				},
+				{ text: '"I\'m pickle rick" rick from rick and morty', author: "Giyan" },
+				{
+					text: "If this was a shonen anime, there will be an enemies to friends arc where the clep and snep reconciles their differences and figure out that they were pit against each other because of the lynxian aristocracy, and the only way to stop the injustice is to eliminate the triumvirate of lynxes that rule over the society they lived in.",
+					author: "Leucean"
+				}
+			];
+
+			function pickRandomQuote() {
+				const q = quotes[Math.floor(Math.random() * quotes.length)];
+				document.getElementById("quoteText").textContent = `"${q.text}"`;
+				document.getElementById("quoteAuthor").textContent = `~ ${q.author}`;
+			}
+
+			document.addEventListener("DOMContentLoaded", pickRandomQuote);
 		</script>
 	</body>
 </html>

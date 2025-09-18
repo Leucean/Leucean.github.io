@@ -20,13 +20,15 @@ a {
     color: #aa8264;
 }
 [data-bs-theme="dark"] body {
-    background-image: url("/media/ui/bg/wakerang.webp");
+    background:
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        /* bottom, image */ url("/media/ui/bg/wakerang.webp");
 }
-
 [data-bs-theme="light"] body {
-    background-image: url("/media/ui/bg/gelthelte.webp");
+    background:
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        /* bottom, image */ url("/media/ui/bg/gelthelte.webp");
 }
-
 [data-bs-theme="dark"] .card {
     background-color: #404040;
 }
