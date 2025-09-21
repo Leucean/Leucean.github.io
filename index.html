@@ -51,14 +51,14 @@
 			</div>
 		</div>
 		<br />
-		<div
-			class="w3-dark-grey p-2 w3-round-xlarge animate__animated animate__fadeInRight w3-bottombar w3-border-black"
+		<button
+			class="w3-right w3-dark-grey p-2 w3-round-xlarge animate__animated animate__fadeInRight w3-bottombar w3-border w3-border-black w3-hover-sepia"
 			id="credits"
-			style="width: max-content; margin-left: auto"
+			style="width: max-content"
 			data-bs-toggle="modal"
 			data-bs-target="#credits">
 			<span>Website by Leucean, 2025</span>
-		</div>
+		</button>
 		<script>
 			w3.includeHTML();
 			function toggleTheme() {
@@ -82,6 +82,7 @@
 					author: "Chilliad"
 				},
 				{ text: "Excuse me. are you a lynx", author: "Pylon" },
+				{ text: "You should become a clep. 10/10 would recommend", author: "Tann" },
 				{
 					text: "And thus India and Pakistan were created and the two nations would surely live in harmony",
 					author: "Pylon"
@@ -92,7 +93,7 @@
 				},
 				{ text: '"I\'m pickle rick" rick from rick and morty', author: "Giyan" },
 				{
-					text: "If this was a shonen anime, there will be an enemies to friends arc where the clep and snep reconciles their differences and figure out that they were pit against each other because of the lynxian aristocracy, and the only way to stop the injustice is to eliminate the triumvirate of lynxes that rule over the society they lived in.",
+					text: "If this was a shonen anime, there will be an enemies to friends arc where the clep and snep reconciles their differences and figure out that they were pit against each other because of the lynxian aristocracy, and the only way to stop the injustice is to eliminate the triumvirate of lynxes that rule over the society they lived in",
 					author: "Leucean"
 				}
 			];
@@ -101,7 +102,7 @@
 				const quoteText = document.getElementById("quoteText");
 				const quoteAuthor = document.getElementById("quoteAuthor");
 
-				const DISPLAY_DURATION = 10000;
+				const DISPLAY_DURATION = 15000;
 
 				// Helper: pick a random quote
 				function pickQuote() {
