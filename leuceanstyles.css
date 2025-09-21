@@ -1,12 +1,3 @@
-body {
-    line-height: 1.5;
-    background-size: cover;
-    background-attachment: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Ensures it takes up at least the full viewport */
-    margin: 0; /* Removes default margins */
-}
 body,
 h1,
 h2,
@@ -23,11 +14,25 @@ a {
     background:
         linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
         /* bottom, image */ url("/media/ui/bg/wakerang.webp");
+    line-height: 1.5;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures it takes up at least the full viewport */
+    margin: 0; /* Removes default margins */
 }
 [data-bs-theme="light"] body {
     background:
         linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
         /* bottom, image */ url("/media/ui/bg/gelthelte.webp");
+    line-height: 1.5;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures it takes up at least the full viewport */
+    margin: 0; /* Removes default margins */
 }
 [data-bs-theme="dark"] .card {
     background-color: #404040;
@@ -60,11 +65,10 @@ a {
         color 0.3s ease;
 }
 
-button:hover {
-    filter: sepia(80%);
-    transition: 0.133s;
-}
 [data-bs-theme="light"] button:hover {
     filter: sepia(40%);
     transition: 0.133s;
+}
+#navbar-mobile button:focus {
+    outline: none;
 }

@@ -12,36 +12,52 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="/hover.css" rel="stylesheet" media="all" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="https://www.w3schools.com/lib/w3.js"></script>
 	</head>
 	<body style="width: 66%; margin: auto; padding-top: 6%" class="w3-mobile">
-		<div class="container-fluid" id="header">
+		<div w3-include-html="/ui/about.html"></div>
+		<div w3-include-html="/ui/conventions.html"></div>
+		<div w3-include-html="/ui/gallery.html"></div>
+		<div w3-include-html="/ui/lore.html"></div>
+		<div w3-include-html="/ui/lynx.html"></div>
+		<div w3-include-html="/ui/credits.html"></div>
+		<div class="container-fluid animate__animated animate__fadeInDown" id="header">
 			<div w3-include-html="/ui/header.html"></div>
 		</div>
 		<br />
-		<div class="container-fluid" id="socials">
+		<div class="container-fluid animate__animated animate__fadeInLeft" id="socials">
 			<div w3-include-html="/ui/socials.html"></div>
 		</div>
 		<br />
-		<div class="container-fluid" id="navbar">
+		<div class="container-fluid animate__animated animate__fadeInRight" id="navbar">
 			<div w3-include-html="/ui/navbar.html"></div>
 		</div>
-		<div class="container-fluid" id="quotes">
-			<div class="card mx-auto mt-4 shadow-sm w3-dark-grey w3-bottombar w3-border-black">
-				<div class="card-header text-center">Friend Quote of the Day</div>
-				<div class="card-body text-center">
+		<div class="container-fluid">
+			<div
+				class="mx-auto mt-4 shadow-sm w3-dark-grey w3-bottombar w3-border-black w3-round-xlarge animate__animated"
+				style="width: fit-content"
+				id="quotecontainer">
+				<div class="container-fluid text-center pt-3">
+					Featured Friend Quote
+					<hr />
+				</div>
+				<div class="container-fluid text-center" id="quote">
 					<p class="fs-5 mb-2" id="quoteText"></p>
 					<p class="text-muted" id="quoteAuthor"></p>
 				</div>
 			</div>
 		</div>
-
 		<br />
 		<div
-			class="w3-display-bottomright w3-hide-small w3-hide-medium w3-container w3-dark-grey w3-right-align w3-opacity"
-			id="credits">
-			<p>Website made by Leucean, 2025.</p>
+			class="w3-dark-grey p-2 w3-round-xlarge animate__animated animate__fadeInRight w3-bottombar w3-border-black"
+			id="credits"
+			style="width: max-content; margin-left: auto"
+			data-bs-toggle="modal"
+			data-bs-target="#credits">
+			<span>Website by Leucean, 2025</span>
 		</div>
 		<script>
 			w3.includeHTML();
@@ -52,13 +68,19 @@
 			const quotes = [
 				{ text: "I don't think the blanket needs condiments", author: "Leaf" },
 				{ text: "Meow", author: "Dansan" },
-				{ text: "WHAT", author: "Pylon" },
+				{ text: "Imagine debriefing labubus in World War III but in an Australian accent", author: "Khyber" },
 				{ text: "idk im a cat", author: "Andrew" },
-				{ text: "Smh", author: "Pylon" },
-				{ text: "...", author: "Pylon" },
+				{ text: "Clouded Leopards make me Cumulonimbust", author: "Aspen" },
+				{ text: "Mesh shirts are like chain mail for twinks", author: "Dig" },
+				{ text: "Not right now... GODDAMN IT", author: "Zayde" },
+				{ text: "What the [redacted] is a furry website?!", author: "Cted" },
 				{ text: "Too human", author: "Siriza" },
 				{ text: "My pronouns are jolli/bee", author: "Oreolis" },
 				{ text: "I like how Pylonchat has created NPCs like 'Smh, but also uwu", author: "Matcha" },
+				{
+					text: "What if aliens came to earth and were offended because we didn't call them the right pronouns",
+					author: "Chilliad"
+				},
 				{ text: "Excuse me. are you a lynx", author: "Pylon" },
 				{
 					text: "And thus India and Pakistan were created and the two nations would surely live in harmony",
@@ -74,14 +96,58 @@
 					author: "Leucean"
 				}
 			];
+			document.addEventListener("DOMContentLoaded", () => {
+				const quotec = document.getElementById("quotecontainer");
+				const quoteText = document.getElementById("quoteText");
+				const quoteAuthor = document.getElementById("quoteAuthor");
 
-			function pickRandomQuote() {
-				const q = quotes[Math.floor(Math.random() * quotes.length)];
-				document.getElementById("quoteText").textContent = `"${q.text}"`;
-				document.getElementById("quoteAuthor").textContent = `~ ${q.author}`;
-			}
+				const DISPLAY_DURATION = 10000;
 
-			document.addEventListener("DOMContentLoaded", pickRandomQuote);
+				// Helper: pick a random quote
+				function pickQuote() {
+					return quotes[Math.floor(Math.random() * quotes.length)];
+				}
+
+				// Helper: wait for animation to finish
+				function waitAnimationEnd(element) {
+					return new Promise((a) => {
+						element.addEventListener("animationend", a, { once: true });
+					});
+				}
+
+				// Show a quote with fade-in
+				async function showQuote() {
+					const q = pickQuote();
+					quoteText.textContent = `"${q.text}"`;
+					quoteAuthor.textContent = `~ ${q.author}`;
+
+					quotec.classList.remove("animate__fadeOutRight");
+					quotec.classList.add("animate__fadeInLeft");
+
+					await waitAnimationEnd(quotec);
+				}
+
+				// Fade out current quote
+				async function hideQuote() {
+					quotec.classList.remove("animate__fadeInLeft");
+					quotec.classList.add("animate__fadeOutRight");
+
+					await waitAnimationEnd(quotec);
+					quotec.classList.remove("animate__fadeOutRight");
+				}
+
+				// Main loop
+				async function changeQuotes() {
+					while (true) {
+						await showQuote();
+						await new Promise((res) => setTimeout(res, DISPLAY_DURATION));
+						await hideQuote();
+					}
+				}
+
+				// Start the cycle
+				changeQuotes();
+			});
 		</script>
 	</body>
 </html>
