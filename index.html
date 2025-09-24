@@ -24,15 +24,15 @@
 		<div w3-include-html="/ui/lore.html"></div>
 		<div w3-include-html="/ui/lynx.html"></div>
 		<div w3-include-html="/ui/credits.html"></div>
-		<div class="container-fluid animate__animated animate__fadeInDown" id="header">
+		<div class="container-fluid animate__animated" id="header">
 			<div w3-include-html="/ui/header.html"></div>
 		</div>
 		<br />
-		<div class="container-fluid animate__animated animate__fadeInLeft" id="socials">
+		<div class="container-fluid animate__animated" id="socials">
 			<div w3-include-html="/ui/socials.html"></div>
 		</div>
 		<br />
-		<div class="container-fluid animate__animated animate__fadeInRight" id="navbar">
+		<div class="container-fluid animate__animated" id="navbar">
 			<div w3-include-html="/ui/navbar.html"></div>
 		</div>
 		<div class="container-fluid">
@@ -64,7 +64,30 @@
 			function toggleTheme() {
 				const current = document.documentElement.getAttribute("data-bs-theme");
 				document.documentElement.setAttribute("data-bs-theme", current === "dark" ? "light" : "dark");
+				backgroundSwapper();
 			}
+			window.addEventListener("DOMContentLoaded", () => {
+				document.getElementById("header").classList.add("animate__fadeInDown");
+				document.getElementById("socials").classList.add("animate__fadeInLeft");
+				document.getElementById("navbar").classList.add("animate__fadeInRight");
+				document.getElementById("credits").classList.add("animate__fadeInRight");
+			});
+			function backgroundSwapper() {
+				var images = [
+					"/media/ui/bg/wakerang.webp",
+					"/media/ui/bg/wakerang.webp",
+					"/media/ui/bg/wakerang.webp",
+					"/media/ui/bg/wakerang.webp",
+					"/media/ui/bg/wakerang.webp",
+					"/media/ui/bg/gelthelte.webp",
+					"/media/ui/bg/gelthelte.webp",
+					"/media/ui/bg/gelthelte.webp",
+					"/media/ui/bg/sunset.webp",
+					"/media/ui/bg/handholding.webp"
+				];
+				document.body.style.backgroundImage = "url(" + images[Math.floor(Math.random() * images.length)] + ")";
+			}
+			window.addEventListener("DOMContentLoaded", backgroundSwapper);
 			const quotes = [
 				{ text: "I don't think the blanket needs condiments", author: "Leaf" },
 				{ text: "Meow", author: "Dansan" },
@@ -75,8 +98,11 @@
 				{ text: "Not right now... GODDAMN IT", author: "Zayde" },
 				{ text: "What the [redacted] is a furry website?!", author: "Cted" },
 				{ text: "Too human", author: "Siriza" },
+
 				{ text: "My pronouns are jolli/bee", author: "Oreolis" },
-				{ text: "I like how Pylonchat has created NPCs like 'Smh, but also uwu", author: "Matcha" },
+				{ text: "Wha.... wha do you want me to say...", author: "Cleric" },
+				{ text: "You want me to think? I can't think then...", author: "Hako" },
+				{ text: "I like how Pylonchat has created NPCs like 'Smh, but also uwu'", author: "Matcha" },
 				{
 					text: "What if aliens came to earth and were offended because we didn't call them the right pronouns",
 					author: "Chilliad"
@@ -91,7 +117,7 @@
 					text: "It's the concept of being too employed and tired to gender so I'm a girlfailure boyfailure",
 					author: "Kathy (Smores)"
 				},
-				{ text: '"I\'m pickle rick" rick from rick and morty', author: "Giyan" },
+				{ text: "CIA sleeper cell labubu rave", author: "Giyan" },
 				{
 					text: "If this was a shonen anime, there will be an enemies to friends arc where the clep and snep reconciles their differences and figure out that they were pit against each other because of the lynxian aristocracy, and the only way to stop the injustice is to eliminate the triumvirate of lynxes that rule over the society they lived in",
 					author: "Leucean"
