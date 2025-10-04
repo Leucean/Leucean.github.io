@@ -50,6 +50,10 @@ body {
         background-color 0.3s ease,
         color 0.3s ease;
 }
+#headerpic {
+    transition: opacity 0.5s ease; /* fade duration 0.5s */
+    opacity: 1;
+}
 
 [data-bs-theme="light"] button:hover {
     filter: sepia(40%);
