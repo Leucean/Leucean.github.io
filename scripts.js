@@ -128,3 +128,7 @@ function iconSwitcher() {
     document.querySelector("#headerpic img").src = randomImage;
 }
 window.onload = iconSwitcher;
+window.addEventListener('load', function () {
+    document.body.classList.remove('preload');
+});
+
