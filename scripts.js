@@ -3,12 +3,7 @@ function toggleTheme() {
     const current = document.documentElement.getAttribute("data-bs-theme");
     document.documentElement.setAttribute("data-bs-theme", current === "dark" ? "light" : "dark");
 }
-window.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("header").classList.add("animate__fadeInDown");
-    document.getElementById("socials").classList.add("animate__fadeInLeft");
-    document.getElementById("navbar").classList.add("animate__fadeInRight");
-    document.getElementById("credits").classList.add("animate__fadeInRight");
-});
+
 function backgroundSwapper() {
     var images = [
         "/media/ui/bg/wakerang.webp",
@@ -128,7 +123,6 @@ function iconSwitcher() {
     document.querySelector("#headerpic img").src = randomImage;
 }
 window.onload = iconSwitcher;
-window.addEventListener('load', function () {
-    document.body.classList.remove('preload');
+window.addEventListener("load", function () {
+    document.body.classList.remove("preload");
 });
-
