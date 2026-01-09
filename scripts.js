@@ -6,9 +6,9 @@ function toggleTheme() {
 
 function backgroundSwapper() {
     var images = [
-        "/media/ui/bg/wakerang.webp",
-        "/media/ui/bg/wakerang.webp",
-        "/media/ui/bg/wakerang.webp",
+        "/media/ui/bg/aurora.webp",
+        "/media/ui/bg/aurora.webp",
+        "/media/ui/bg/aurora.webp",
         "/media/ui/bg/wakerang.webp",
         "/media/ui/bg/wakerang.webp",
         "/media/ui/bg/gelthelte.webp",
@@ -22,7 +22,6 @@ function backgroundSwapper() {
 window.addEventListener("DOMContentLoaded", backgroundSwapper);
 const quotes = [
     { text: "I don't think the blanket needs condiments", author: "Leaf" },
-    { text: "Meow", author: "Dansan" },
     { text: "Imagine debriefing labubus in World War III but in an Australian accent", author: "Khyber" },
     { text: "idk im a cat", author: "Andrew" },
     { text: "Clouded Leopards make me Cumulonimbust", author: "Aspen" },
